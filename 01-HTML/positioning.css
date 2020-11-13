@@ -1,0 +1,45 @@
+#container {
+    display: inline-block;
+    background-color: gold;
+    height: 2000px;
+    width: 2000px;
+    /*position: absolute;*/
+}
+
+#box-1,
+#box-2,
+#box-3 {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+}
+
+#box-1 {
+    background-color: green;
+    position: fixed;
+}
+
+#box-2 {
+    background-color: red;
+    /* position: relative;
+    top: 200px;
+    left: 200px;*/
+}
+
+#box-3 {
+    background-color: blue;
+}
+
+
+/*  Position Properties
+    + static: todos los elementos vienen con esto por defecto
+    + absolute: con esta vienen otras: top, right, bottom, left: 
+        primero saca el elementodel flujo normal del documento y aplica cualquier regla de direccion
+        en el ejemplo aleja 40px del documento
+
+    + relative: desde elelemento habria estado en el flujo normal del doc
+    + fixed: el elemento es sacado del flujo normal del doc, como en absolute, pero hay un par de diferencias clave
+        1. fixed siempre será relativo a la ventana sin importar elvalor de la posicion del padre y
+        2. mientras nos movemos permanecerá fija en la pantalla
+*/

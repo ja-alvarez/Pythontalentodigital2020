@@ -1,0 +1,60 @@
+#container {
+    background-color: #ffffff;
+}
+
+h1 {
+    background-color: #b3b3b3;
+    border: 1px solid #c0b79c;
+    padding: 5px;
+    margin: 5px;
+}
+
+span {
+    font-weight: bold;
+}
+
+.text {
+    background-color: #cccccc;
+    border: 1px solid #d0c9b2;
+    padding: 5px;
+    margin: 5px;
+}
+
+.large,
+.medium,
+.small {
+    background-color: #ffff9a;
+    border: 1px solid #e4decf;
+    padding: 5px;
+    margin: 5px;
+}
+
+@media only screen and (max-width: 480px) {
+    #container {
+        width: 100%;
+    }
+    .medium,
+    .large {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1023px) and (min-width: 481px) {
+    #container {
+        width: 100%;
+    }
+    .small,
+    .large {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    #container {
+        width: 100%;
+    }
+    .small,
+    .medium {
+        display: none;
+    }
+}
