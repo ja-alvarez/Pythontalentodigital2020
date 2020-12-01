@@ -1,3 +1,5 @@
+//Me falta completar dos ejercicios (10 y 13)
+
 /*1. Tamaño Grande - Dado un array, escribe una función que cambie todos los números positivos en él, 
 por el string “big”. Ejemplo: grande([-1,3,5,-5]) devuelve [-1, “big”, “big”, -5].*/
 function tamañoGrande(x) {
@@ -43,8 +45,6 @@ function abc2(array) {
 }
 array = abc2([-1, 3, 5, -5]);
 
-
-
 /*4. Doble Visión - Dado un array, crea una función que devuelva un nuevo array donde cada valor se duplique. Entonces, doble([1,2,3]) debiera devolver [2, 4, 6] sin cambiar el array original.*/
 function vision(arr) {
     newarr = [];
@@ -71,7 +71,6 @@ function contarPositivos(arr) {
 }
 console.log(contarPositivos([-1, 1, 1, 1]));
 
-
 /*6. Pares e Impares - Crea una función que acepte un array. Cada vez que ese array tenga 3 valores impares 
 seguidos, imprime (print) “¡Qué imparcial!”, y cada vez que tenga 3 pares seguidos, 
 imprime (print) “¡Es para bien!”.*/
@@ -81,20 +80,20 @@ function paresImpares(arr) {
     for (var i = 0; i < arr.length; i++) {
         if (arr[i] % 2 != 0) {
             impar = impar + 1;
-            if (impar >= 3) {
+            par = 0;
+            if (impar == 3) {
                 console.log("¡Qué imparcial!");
             }
-        }
-        if (arr[i] % 2 != 1) {
+        } else {
             par = par + 1;
-            if (par >= 3) {
+            impar = 0;
+            if (par == 3) {
                 console.log("¡Es para bien!");
             }
         }
     }
 }
-arr = paresImpares([5, 7, 3, 4, 0, 0]);
-//Ejercicio 6 hay que corregirlo*
+arr = paresImpares([5, 7, 3, 4, 0, 0, 1]);
 
 /*7. Incrementa los Segundos - Dado un array de números arr, agrega 1 a cualquier otro elemento, 
 específicamente a aquellos cuyo índice es impar (arr[1], arr[3], arr[5], etc). 
@@ -118,7 +117,31 @@ arr = incrementaSegundos([0, 1, 2, 3, 4]);
 que contiene strings, reemplaza cada string con un número de acuerdo cantidad de letras (longitud) 
 del string anterior. Por ejemplo, longitudesPrevias([“programar”,“dojo”, “genial”]) debería devolver 
 [“programar”,9, 4]. Pista: ¿For loops solo puede ir hacia adelante?*/
+function longitudesPrevias(x) {
+    for (var i = x.length - 2; i >= 0; i--) {
+        var j = x[i].length;
+        x[i + 1] = j;
+    }
+    return x;
+}
+x = longitudesPrevias(["programar", "dojo", "genial"]);
+console.log(x);
 
+/*function longitudesPrevias(x) {
+    var newArr = [];
+    if ([0]) {
+        newArr.push(x[0]);
+    }
+    for (var i = x.length - 1; i >= 0; i--) {
+        if ([i] > 0) {
+            x[i] = x[i - 1].length;
+            newArr.push(x[i]);
+        }
+    }
+    return newArr;
+}
+x = longitudesPrevias(["programar", "dojo", "genial"]);
+console.log(x);*/
 
 /*9. Agrega Siete - Construye una función que acepte un array. Devuelve un nuevo array con todos los 
 valores del original, pero sumando 7 a cada uno. No alteres el array original. Por ejemplo, 
@@ -142,7 +165,19 @@ Ejemplo: invertir([3,1,6,4,2)) devuelve el mismo array pero con sus valores al r
 /*11. Perspectiva: Negativa - Dado un array crear y devuelve uno nuevo que contenga todos los valores 
 del array original, pero negativos (no simplemente multiplicando por -1). Dado [1,-3,5], 
 devuelve [-1,-3,-5].*/
-
+function perspectivaNegativa(x) {
+    var newArr = [];
+    for (i = 0; i < x.length; i++) {
+        if (x[i] > 0) {
+            x[i] = x[i] - (x[i] * 2);
+            newArr.push(x[i]);
+        } else {
+            newArr.push(x[i]);
+        }
+    }
+    return newArr;
+}
+x = perspectivaNegativa([1, -3, 5]);
 
 /*12. Siempre hambriento - Crea una función que acepte un array e imprima (print) “yummy” cada vez que 
 alguno de los valores sea “comida”. Si ningún valor es “comida”, entonces imprime “tengo hambre” una vez.*/
@@ -168,5 +203,13 @@ a [“pizza¨, 42, “Ada”, true]. cambiaHaciaElCentro([1,2,3,4,5,6]) cambia e
 No es necesario devolver (return) el array esta vez.*/
 
 /*14. Escala el Array - Dado un array arr y un número num, multiplica todos los valores en el array 
-arr por el número num, y devuelve el array arr modificado. Por ejemplo, escalaArray([1,2,3], 3] 
-    debería devolver [3,6,9].*/
+arr por el número num, y devuelve el array arr modificado. Por ejemplo, escalaArray([1,2,3], 3] debería 
+devolver [3,6,9].*/
+function escalaArray(array, num) {
+    for (i = 0; i < array.length; i++) {
+        array[i] = array[i] * num;
+    }
+    return array;
+}
+
+console.log(escalaArray([1, 2, 3], 3));
