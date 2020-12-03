@@ -157,10 +157,19 @@ x = agregaSiete([1, 2, 3]);
 console.log(x);
 
 /*10. Array Inverso - Dado un array, escribe una función que invierte sus valores en el lugar. 
-Ejemplo: invertir([3,1,6,4,2)) devuelve el mismo array pero con sus valores al revés, 
+Ejemplo: invertir([3,1,6,4,2]) devuelve el mismo array pero con sus valores al revés, 
     es decir [2,4,6,1,3]. Haz esto sin crear un array temporal vacío. (Pista: necesitarás intercambiar 
         (swap) valores).*/
-
+function arrayInverso(arreglo) {
+    for (i = 0; i < arreglo.length / 2; i++) { //0, 1, 2
+        var temp = arreglo[arreglo.length - (1 + i)]; //2,4
+        arreglo[arreglo.length - (1 + i)] = arreglo[i];
+        arreglo[i] = temp;
+    }
+    return arreglo;
+}
+x = arrayInverso([3, 1, 6, 4, 2]);
+console.log(x);
 
 /*11. Perspectiva: Negativa - Dado un array crear y devuelve uno nuevo que contenga todos los valores 
 del array original, pero negativos (no simplemente multiplicando por -1). Dado [1,-3,5], 
@@ -199,8 +208,20 @@ arr = siempreHambriento([2, 2]);
 
 /*13. Cambiar hacia el centro -  Dado un array, cambia el primer y último valor, el tercero con el 
 ante penútimo, etc. Ejemplo: cambiaHaciaElCentro([true, 42, “Ada”, 2, “pizza”]) cambia el array 
-a [“pizza¨, 42, “Ada”, true]. cambiaHaciaElCentro([1,2,3,4,5,6]) cambia el array a [6,2,4,3,5,1]. 
+a [“pizza¨, 42, “Ada”, 2, true]. cambiaHaciaElCentro([1,2,3,4,5,6]) cambia el array a [6,2,4,3,5,1]. 
 No es necesario devolver (return) el array esta vez.*/
+function cambiaHaciaElCentro(arreglo) {
+    for (i = 0; i < arreglo.length / 2; i += 2) { //0, 1, 2
+        var temp = arreglo[arreglo.length - (1 + i)]; //2,4
+        arreglo[arreglo.length - (1 + i)] = arreglo[i];
+        arreglo[i] = temp;
+    }
+    return arreglo;
+}
+x = cambiaHaciaElCentro([true, 42, "Ada", 2, "pizza"]);
+y = cambiaHaciaElCentro([1, 2, 3, 4, 5, 6]);
+
+
 
 /*14. Escala el Array - Dado un array arr y un número num, multiplica todos los valores en el array 
 arr por el número num, y devuelve el array arr modificado. Por ejemplo, escalaArray([1,2,3], 3] debería 

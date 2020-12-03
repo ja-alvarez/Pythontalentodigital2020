@@ -95,7 +95,8 @@ function a() {
         console.log(j, i);
     }
 }
-//R:undefined?
+//R:undefined
+
 
 var z = 10;
 
@@ -116,6 +117,7 @@ function a() {
 a();
 console.log(z);
 //R: 15, 10
+
 
 var z = 10;
 
