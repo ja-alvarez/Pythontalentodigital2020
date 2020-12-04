@@ -22,9 +22,9 @@ function factorial(num) {
     }
     return sum;
 }
-
 num = factorial(5);
 console.log(num);
+
 
 /*3. Fibonacci - Crea una función para generar números de Fibonacci. En esta famosa secuencia matemática, 
 cada número es la suma de las dos anteriores, partiendo con los valores 0 y 1. Tu función debería 
@@ -34,48 +34,20 @@ fibonacci(2) = 1 (fib(0)+fib(1), o 0+1), fibonacci(3) = 2 (fib(1) + fib(2)3, o 1
 fibonacci(4) = 3 (1+2), fibonacci(5) = 5 (2+3), fibonacci(6) = 8 (3+5), fibonacci(7) = 13 (5+8). 
 Haz esto primero sin usar recursión. Si no sabes qué es una recursión, no te preocupes puesto que 
 vamos a introducir este concepto en la Parte 2 de esta actividad.*/
-
-/////////////////////////////////////////
-/*3. Fibonacci - Crea una función para generar números de Fibonacci. 
-En esta famosa secuencia matemática, 
-cada número es la suma de las dos anteriores, partiendo con los valores 
-0 y 1. Tu función debería 
-aceptar un argumento, un índice en la secuencia (donde 0 corresponde 
-al valor inicial, 4 corresponden 
-al valor cuatro más tarde, etc). Ejemplos: fibonacci(0) = 0 (dado), 
-fibonacci(1) = 1 (dado), 
-fibonacci(2) = 1 (fib(0)+fib(1), o 0+1), 
-fibonacci(3) = 2 (fib(1) + fib(2)3, o 1+1), 
-fibonacci(4) = 3 (1+2), 
-fibonacci(5) = 5 (2+3), 
-fibonacci(6) = 8 (3+5), 
-fibonacci(7) = 13 (5+8). 
-Haz esto primero sin usar recursión. Si no sabes qué es una recursión, 
-no te preocupes puesto que 
-vamos a introducir este concepto en la Parte 2 de esta actividad.
-
-function Fibonacci(num){
-  var a = 0;
-  var b=1;
-  
-   
-    for (var i = 0; i < num; i++){
-      var nTemp=a;
-      a=b;
-      b=nTemp+b;
+function Fibonacci(num) {
+    var fib = [0, 1];
+    for (var i = 2; i <= num; i++) {
+        var x = fib[i - 1] + fib[i - 2];
+        fib.push(x)
     }
-  return a+" ";
+    return fib[fib.length - 1]; //devuelve el último valor
+    /* return fib = devuelve array completo*/
 }
-
-num = Fibonacci(5);
-console.log(num);*/
-///////////////////////////////////////////
-
+num = Fibonacci(8);
 
 
 /*4. Array: Penúltimo: Devuelve el penúltimo elemento del array. Dado [42,true,4,”Liam”, 7] devuelve “Liam”.
 Si el array es muy pequeño, devuelve null. */
-
 function penultimo(x) {
     if (x.length <= 2) {
         return null;
@@ -98,35 +70,30 @@ function Nultimo(x, n) {
 }
 x = Nultimo([5, 2, 3, 6, 4, 9, 7], 3);
 
+
 /*6. Array: Segundo más grande: Devuelve el segundo elemento más grande de un array. Dado [42,1,4,3.14,7], 
 devuelve 7.  Si el array es muy pequeño, devuelve null.*/
-
-
-/*function segundoValor(x) {
-    if (x.length <= 2) {
+function arrayInverso(arreglo) {
+    if (arreglo.length <= 2) {
         return null;
     }
-    var max = x[0];
-    var max2 = x[0];
-    for (i = 0; i < x.length; i++) {
-        if (max < x[i]) {
-            max = x[i];
+    var max = arreglo[0];
+    var max2 = [0];
+    for (i = 0; i < arreglo.length; i++) {
+        if (arreglo[i] > max) {
+            max = arreglo[i];
         }
     }
-    for (i = 0; i < x.length; i++) {
-        if (x[i] != max) {
-            if ((max2 < x[i])) {
-                max2 = x[i];
+    for (i = 0; i < arreglo.length; i++) {
+        if (arreglo[i] != max) {
+            if (arreglo[i] > max2) {
+                max2 = arreglo[i];
             }
         }
-        return max2;
     }
+    return max2;
 }
-x = segundoValor([42, 1, 4, 3.14, 7]);
-console.log(x);*/
-//CORREGIR *****************************************************************************
-
-
+x = arrayInverso([42, 1, 4, 3.14, 7]);
 
 
 /*7. Doble Problema Par: Crea una función que cambie un array dado duplicando cada uno de sus elementos
@@ -146,7 +113,18 @@ function dobleProblema(x) {
 }
 x = dobleProblema([4, "Ulysses", 42, false]);
 
+
 /*Parte 2- ¡Presentando las recursiones!
 Actividad
 1. Crea una función Fib(n) que devuelve el enésimo número Fibonacci. Usa recursión para esto. */
+function fibonacci(n) {
+    if (n == 0 || n == 1) {
+        return n;
+    }
+    return fibonacci(n - 2) + fibonacci(n - 1);
+}
+n = fibonacci(8);
+console.log(n);
+
 /*2. Relleno recursivo - por favor mira más abajo.*/
+/* -> index.html */
