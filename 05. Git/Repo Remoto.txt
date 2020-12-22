@@ -1,0 +1,103 @@
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/coding dojo (main)
+$ cd ..
+
+J-alv@TABLET-61VQH9UB MINGW32 /c
+$ ls
+'$AV_ASW'/                  MSOCache/                     Users/
+'$Recycle.Bin'/             OEM/                          Windows/
+'$SysReset'/                OneDriveTemp/                 cygwin/
+'$Windows.~WS'/             PerfLogs/                     hiberfil.sys
+'Archivos de programa'@    'Program Files'/               pagefile.sys
+'Coding Dojo'/              ProgramData/                  swapfile.sys
+'Documents and Settings'@   Recovery/                     wamp/
+ Intel/                    'System Volume Information'/   xampp/
+
+J-alv@TABLET-61VQH9UB MINGW32 /c
+$ cd users
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/users
+$ cd j-alv
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/users/j-alv (master)
+$ cd desktop
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/users/j-alv/desktop (master)
+$ mkdir basic repo
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/users/j-alv/desktop (master)
+$ rm -r basic repo
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/users/j-alv/desktop (master)
+$ mkdir basic_repo
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/users/j-alv/desktop (master)
+$ cd basic_repo
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/users/j-alv/desktop/basic_repo (master)
+$ git init
+Initialized empty Git repository in C:/Users/J-alv/Desktop/basic_repo/.git/
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/users/j-alv/desktop/basic_repo (master)
+$ git remote add origin https://github.com/ja-alvarez/basic_repo.git
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/users/j-alv/desktop/basic_repo (master)
+$ touch index.html
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/users/j-alv/desktop/basic_repo (master)
+$ nano index.html
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/users/j-alv/desktop/basic_repo (master)
+$ git branch -M main
+
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/users/j-alv/desktop/basic_repo (main)
+$ git add .
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/users/j-alv/desktop/basic_repo (main)
+$ git commit -m "git repo exercise"
+On branch main
+nothing to commit, working tree clean
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/users/j-alv/desktop/basic_repo (main)
+$ git push -u origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 614 bytes | 87.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/ja-alvarez/basic_repo.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/users/j-alv/desktop/basic_repo (main)
+$ touch ReadMe.txt
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/users/j-alv/desktop/basic_repo (main)
+$ nano ReadMe.txt
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/users/j-alv/desktop/basic_repo (main)
+$ git add .
+warning: LF will be replaced by CRLF in ReadMe.txt.
+The file will have its original line endings in your working directory
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/users/j-alv/desktop/basic_repo (main)
+$ git commit -m "ReadMe document added"
+[main 9bf74ac] ReadMe document added
+ 1 file changed, 1 insertion(+)
+ create mode 100644 ReadMe.txt
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/users/j-alv/desktop/basic_repo (main)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 373 bytes | 62.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/ja-alvarez/basic_repo.git
+   d334d83..9bf74ac  main -> main
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/users/j-alv/desktop/basic_repo (main)
+$
