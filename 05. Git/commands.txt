@@ -1,0 +1,102 @@
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/Users/j-alv (master)
+$ cd Desktop
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/Users/j-alv/Desktop (master)
+$ mkdir test
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/Users/j-alv/Desktop (master)
+$ cd test
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/Users/j-alv/Desktop/test (master)
+$ touch index.html
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/Users/j-alv/Desktop/test (master)
+$ touch styles.css
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/Users/j-alv/Desktop/test (master)
+$ touch commands.txt
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/Users/j-alv/Desktop/test (master)
+$ cp index.html index_2.html
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/Users/j-alv/Desktop/test (master)
+$ cd ..
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/Users/j-alv/Desktop (master)
+$ mkdir destino
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/Users/j-alv/Desktop (master)
+$ mv index_2.html ../index_2.html
+mv: cannot stat 'index_2.html': No such file or directory
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/Users/j-alv/Desktop (master)
+$ mv index_2.html ../destino
+mv: cannot stat 'index_2.html': No such file or directory
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/Users/j-alv/Desktop (master)
+$ mv index_2.html ^C
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/Users/j-alv/Desktop (master)
+$ mv index_2.html /c/users/j-alv/desktop/destino
+mv: cannot stat 'index_2.html': No such file or directory
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/Users/j-alv/Desktop (master)
+$ mv index_2.html ../destino
+mv: cannot stat 'index_2.html': No such file or directory
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/Users/j-alv/Desktop (master)
+$ mv index_2.html ../c/users/j-alv/desktop/destino
+mv: cannot stat 'index_2.html': No such file or directory
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/Users/j-alv/Desktop (master)
+$ ls
+ 01.jpg
+ 02.jpg
+ 03.jpg
+ APUNTES.HTML
+ APUNTES1.CSS
+ Andres/
+ AnyDesk.exe*
+ Apuntes/
+'Coding Dojo.lnk'*
+'Comandos básicos'/
+'El desafío hacia la Transformación Digital en Chile.pdf'
+'Este equipo - Acceso directo.lnk'*
+'Git Bash.lnk'*
+'Git CMD.lnk'*
+'Git Shell.lnk'*
+ Git-2.29.2.3-32-bit.exe*
+ GitHub.appref-ms
+'Nuevo documento de texto.txt'
+ Pendiente/
+'Prueba jQuery'/
+'XAMPP Control Panel.lnk'*
+ Zoom.lnk*
+ desktop.ini
+ destino/
+ prueba2.html
+ tAlgoritmos.js
+ test/
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/Users/j-alv/Desktop (master)
+$ cd test
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/Users/j-alv/Desktop/test (master)
+$ mv index_2.html ../destino
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/Users/j-alv/Desktop/test (master)
+$ rm style.css
+rm: cannot remove 'style.css': No such file or directory
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/Users/j-alv/Desktop/test (master)
+$ rm styles.css
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/Users/j-alv/Desktop/test (master)
+$ cd ..
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/Users/j-alv/Desktop (master)
+$ rm -rf destino
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/Users/j-alv/Desktop (master)
+$

@@ -1,0 +1,140 @@
+
+J-alv@TABLET-61VQH9UB MINGW32 /c
+$ cd users
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/users
+$ cd j-alv
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/users/j-alv (master)
+$ cd desktop
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/users/j-alv/desktop (master)
+$ mkdir test
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/users/j-alv/desktop (master)
+$ cd test
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/users/j-alv/desktop/test (master)
+$ touch index.html
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/users/j-alv/desktop/test (master)
+$ touch styles.css
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/users/j-alv/desktop/test (master)
+$ git init
+Initialized empty Git repository in C:/Users/J-alv/Desktop/test/.git/
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/users/j-alv/desktop/test (master)
+$ git add .
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/users/j-alv/desktop/test (master)
+$ git commit -m "inicio"
+[master (root-commit) edd85ab] inicio
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.html
+ create mode 100644 styles.css
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/users/j-alv/desktop/test (master)
+$ nano index.html
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/users/j-alv/desktop/test (master)
+$ git add .
+warning: LF will be replaced by CRLF in index.html.
+The file will have its original line endings in your working directory
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/users/j-alv/desktop/test (master)
+$ git commit -m "actualización de html"
+[master 2349e77] actualización de html
+ 1 file changed, 11 insertions(+)
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/users/j-alv/desktop/test (master)
+$ nano styles.css
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/users/j-alv/desktop/test (master)
+$ git add .
+warning: LF will be replaced by CRLF in styles.css.
+The file will have its original line endings in your working directory
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/users/j-alv/desktop/test (master)
+$ git commit -m "actualización de css"
+[master 102e9f2] actualización de css
+ 1 file changed, 1 insertion(+)
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/users/j-alv/desktop/test (master)
+$ git log
+commit 102e9f2d786a03f457c62735a1bebab862f142f7 (HEAD -> master)
+Author: Juan Alvarez <juan.alvarez1989@gmail.com>
+Date:   Tue Dec 22 01:37:28 2020 -0300
+
+    actualización de css
+
+commit 2349e772b043da6abd6513d3a1a7d01fc022074b
+Author: Juan Alvarez <juan.alvarez1989@gmail.com>
+Date:   Tue Dec 22 01:36:08 2020 -0300
+
+    actualización de html
+
+commit edd85ab680904deaa54a6caf9c7a10dfbb495b2f
+Author: Juan Alvarez <juan.alvarez1989@gmail.com>
+Date:   Tue Dec 22 01:34:23 2020 -0300
+
+    inicio
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/users/j-alv/desktop/test (master)
+$ revert 102e9f2
+bash: revert: command not found
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/users/j-alv/desktop/test (master)
+$ git revert 102e9f2
+[master 544ebe5] Revert "actualización de css"
+ 1 file changed, 1 deletion(-)
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/users/j-alv/desktop/test (master)
+$ nano styles.css
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/users/j-alv/desktop/test (master)
+$ git add .
+warning: LF will be replaced by CRLF in styles.css.
+The file will have its original line endings in your working directory
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/users/j-alv/desktop/test (master)
+$ git commit -m "nuevo cambio css"
+[master 8fe8ca5] nuevo cambio css
+ 1 file changed, 1 insertion(+)
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/users/j-alv/desktop/test (master)
+$ git log
+commit 8fe8ca5fe0bc6b993a97ca86cfff9c86a54dadcc (HEAD -> master)
+Author: Juan Alvarez <juan.alvarez1989@gmail.com>
+Date:   Tue Dec 22 01:40:48 2020 -0300
+
+    nuevo cambio css
+
+commit 544ebe510c371913a0f65c270b70d40d422e2868
+Author: Juan Alvarez <juan.alvarez1989@gmail.com>
+Date:   Tue Dec 22 01:38:56 2020 -0300
+
+    Revert "actualización de css"
+
+    This reverts commit 102e9f2d786a03f457c62735a1bebab862f142f7.
+
+commit 102e9f2d786a03f457c62735a1bebab862f142f7
+Author: Juan Alvarez <juan.alvarez1989@gmail.com>
+Date:   Tue Dec 22 01:37:28 2020 -0300
+
+    actualización de css
+
+commit 2349e772b043da6abd6513d3a1a7d01fc022074b
+Author: Juan Alvarez <juan.alvarez1989@gmail.com>
+Date:   Tue Dec 22 01:36:08 2020 -0300
+
+    actualización de html
+
+commit edd85ab680904deaa54a6caf9c7a10dfbb495b2f
+Author: Juan Alvarez <juan.alvarez1989@gmail.com>
+Date:   Tue Dec 22 01:34:23 2020 -0300
+
+    inicio
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/users/j-alv/desktop/test (master)
+$
