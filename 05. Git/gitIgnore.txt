@@ -1,0 +1,37 @@
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/users/j-alv/desktop/basic_repo (main)
+$ mkdir packages
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/users/j-alv/desktop/basic_repo (main)
+$ touch secret.js
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/users/j-alv/desktop/basic_repo (main)
+$ touch log.html
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/users/j-alv/desktop/basic_repo (main)
+$ touch .gitignore
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/users/j-alv/desktop/basic_repo (main)
+$ nano .gitignore
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/users/j-alv/desktop/basic_repo (main)
+$ git add .
+warning: LF will be replaced by CRLF in .gitignore.
+The file will have its original line endings in your working directory
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/users/j-alv/desktop/basic_repo (main)
+$ git commit -m "git ignore exercise"
+[main 0ce6d14] git ignore exercise
+ 1 file changed, 5 insertions(+)
+ create mode 100644 .gitignore
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/users/j-alv/desktop/basic_repo (main)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 391 bytes | 55.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/ja-alvarez/basic_repo.git
+   9bf74ac..0ce6d14  main -> main
