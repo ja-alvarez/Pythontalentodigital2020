@@ -1,0 +1,65 @@
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/Users/j-alv/desktop (master)
+$ mkdir "Update and Commit"
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/Users/j-alv/desktop (master)
+$ cd "Update and Commit"
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/Users/j-alv/desktop/Update and Commit (master)
+$ git clone https://github.com/ja-alvarez/git_demo
+Cloning into 'git_demo'...
+remote: Enumerating objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 3
+Receiving objects: 100% (3/3), done.
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/Users/j-alv/desktop/Update and Commit (master)
+$ git init
+Initialized empty Git repository in C:/Users/J-alv/Desktop/Update and Commit/.git/
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/Users/j-alv/desktop/Update and Commit (master)
+$ ls
+git_demo/
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/Users/j-alv/desktop/Update and Commit (master)
+$ cd git_demo
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/Users/j-alv/desktop/Update and Commit/git_demo (master)
+$ ls
+demo_index.html
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/Users/j-alv/desktop/Update and Commit/git_demo (master)
+$ nano demo_index.html
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/Users/j-alv/desktop/Update and Commit/git_demo (master)
+$ git add demo_index.html
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/Users/j-alv/desktop/Update and Commit/git_demo (master)
+$ git commit -m "cambio color texto demo_index.html"
+[master 9bed01d] cambio color texto demo_index.html
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/Users/j-alv/desktop/Update and Commit/git_demo (master)
+$ git pull
+Already up to date.
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/Users/j-alv/desktop/Update and Commit/git_demo (master)
+$ git push origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 346 bytes | 69.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/ja-alvarez/git_demo
+   199a72c..9bed01d  master -> master
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/Users/j-alv/desktop/Update and Commit/git_demo (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/Users/j-alv/desktop/Update and Commit/git_demo (master)
+$

@@ -1,0 +1,62 @@
+J-alv@TABLET-61VQH9UB MINGW32 /c/Users/j-alv/desktop/Apithecatrocks (master)
+$ git checkout -b add-css
+Switched to a new branch 'add-css'
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/Users/j-alv/desktop/Apithecatrocks (add-css)
+$ touch style.css
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/Users/j-alv/desktop/Apithecatrocks (add-css)
+$ git add .
+warning: LF will be replaced by CRLF in index.html.
+The file will have its original line endings in your working directory
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/Users/j-alv/desktop/Apithecatrocks (add-css)
+$ git commit -m "css style added"
+[add-css 570bb3b] css style added
+ 2 files changed, 27 insertions(+), 2 deletions(-)
+ create mode 100644 style.css
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/Users/j-alv/desktop/Apithecatrocks (add-css)
+$ git checkout master
+Switched to branch 'master'
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/Users/j-alv/desktop/Apithecatrocks (master)
+$ git branch
+  add-css
+* master
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/Users/j-alv/desktop/Apithecatrocks (master)
+$ git merge add-css
+Updating 78b4919..570bb3b
+Fast-forward
+ index.html |  7 +++++--
+ style.css  | 22 ++++++++++++++++++++++
+ 2 files changed, 27 insertions(+), 2 deletions(-)
+ create mode 100644 style.css
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/Users/j-alv/desktop/Apithecatrocks (master)
+$ git add .
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/Users/j-alv/desktop/Apithecatrocks (master)
+$ git commit -m "Appi the cat - branches and merges"
+On branch master
+nothing to commit, working tree clean
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/Users/j-alv/desktop/Apithecatrocks (master)
+$ git remote add origin https://github.com/ja-alvarez/Apithecat.git
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/Users/j-alv/desktop/Apithecatrocks (master)
+$ git branch -M main
+
+J-alv@TABLET-61VQH9UB MINGW32 /c/Users/j-alv/desktop/Apithecatrocks (main)
+$ git push -u origin main
+Enumerating objects: 14, done.
+Counting objects: 100% (14/14), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (13/13), done.
+Writing objects: 100% (14/14), 164.57 KiB | 3.74 MiB/s, done.
+Total 14 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), done.
+To https://github.com/ja-alvarez/Apithecat.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
