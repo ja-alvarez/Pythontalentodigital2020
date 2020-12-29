@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Weather</title>
+    <style>
+
+    </style>
+    <script src='https://code.jquery.com/jquery-3.5.1.js'></script>
+    <script>
+        $(document).ready(function() {
+            $('form').submit(function() {
+                var url = "https://api.openweathermap.org/data/2.5/weather?q=" + $("#nombre").val() + "&APPID=2e848c0d93869f750ab8835a31bbba5d"
+                $.get(url, function(res) {
+                    $("#lat").append(res.coord.lat)
+                    $("#lon").append(res.coord.lon)
+                    $("#temperatura").append(res.main.temp)
+                    $("#ciudad").append(res.name)
+                }, 'json');
+                return false;
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <form id="clima">
+        <label for="nombre">City:</label>
+        <input type="text" id="nombre" name="nombre">
+        <input type="submit" id="submit query" name="submit query" value="Submit Query">
+    </form>
+    <div>
+        <p>City:<span id="ciudad"></span></p>
+        <p>Temperature: <span id="temperatura"></span> °F</p>
+        <p>Coord: latitude:<span id="lat"></span> longitude:<span id="lon"></span></p>
+    </div>
+</body>
+
+</html>
