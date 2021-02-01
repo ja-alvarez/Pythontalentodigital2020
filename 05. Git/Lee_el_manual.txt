@@ -1,0 +1,288 @@
+
+Welcome to Fedora 33 (riscv64)
+ 
+[root@localhost ~]# vflogin jalvarez
+Password:
+Your account is now synchronized with the server every 60 seconds. You can force
+ a synchronization with the 'vfsync' shell command.
+ 
+man git
+[jalvarez@localhost ~]$ man git
+man git-add
+Generating encryption key.
+GIT(1)                            Git Manual                            GIT(1)
+ 
+NAME
+       git - the stupid content tracker
+ 
+SYNOPSIS
+       git [--version] [--help] [-C <path>] [-c <name>=<value>]
+       [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+       [-p|--paginate|-P|--no-pager] [--no-replace-objects] [--bare]
+       [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+       [--super-prefix=<path>]
+       <command> [<args>]
+
+DESCRIPTION
+       Git is a fast, scalable, distributed revision control system with an
+       unusually rich command set that provides both high-level operations and
+       full access to internals.
+ 
+       See gittutorial(7) to get started, then see giteveryday(7) for a useful
+       minimum set of commands. The Git User’s Manual[1] has a more in-depth
+       introduction.
+ 
+       After you mastered the basic concepts, you can come back to this page
+       to learn what commands Git offers. You can learn more about individual
+       Git commands with "git help command". gitcli(7) manual page gives you
+       an overview of the command-line command syntax.
+ 
+       A formatted and hyperlinked copy of the latest Git documentation can be
+       viewed at https://git.github.io/htmldocs/git.html or
+set mark: ...skipping...
+GIT(1)                            Git Manual                            GIT(1)
+ 
+NAME
+       git - the stupid content tracker
+ SYNOPSIS
+       git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p|--paginate|-P|--no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>]
+           <command> [<args>]
+
+DESCRIPTION
+       Git is a fast, scalable, distributed revision control system with an
+       unusually rich command set that provides both high-level operations and
+       full access to internals.
+ 
+       See gittutorial(7) to get started, then see giteveryday(7) for a useful
+       minimum set of commands. The Git User’s Manual[1] has a more in-depth
+       introduction.
+ 
+       After you mastered the basic concepts, you can come back to this page
+       to learn what commands Git offers. You can learn more about individual
+       Git commands with "git help command". gitcli(7) manual page gives you
+       an overview of the command-line command syntax.
+ 
+       A formatted and hyperlinked copy of the latest Git documentation can be
+       viewed at https://git.github.io/htmldocs/git.html or
+       https://git-scm.com/docs.
+
+OPTIONS
+       --version
+           Prints the Git suite version that the git program came from.
+ 
+       --help
+           Prints the synopsis and a list of the most commonly used commands.
+           If the option --all or -a is given then all available commands are
+           printed. If a Git command is named this option will bring up the
+           manual page for that command.
+ 
+           Other options are available to control how the manual page is
+           displayed. See git-help(1) for more information, because git --help
+           ...  is converted internally into git help ....
+ 
+       -C <path>
+           Run as if git was started in <path> instead of the current working
+           directory. When multiple -C options are given, each subsequent
+           non-absolute -C <path> is interpreted relative to the preceding -C
+           <path>. If <path> is present but empty, e.g.  -C "", then the
+           current working directory is left unchanged.
+ 
+           This option affects options that expect path name like --git-dir
+           and --work-tree in that their interpretations of the path names
+           would be made relative to the working directory caused by the -C
+           option. For example the following invocations are equivalent:
+
+		git --git-dir=a.git --work-tree=b -C c status
+               	git --git-dir=c/a.git --work-tree=c/b status
+ 
+       -c <name>=<value>
+...skipping...
+       --version
+           Prints the Git suite version that the git program came from.
+[jalvarez@localhost ~]$ man git
+Generating encryption key.
+GIT(1)                            Git Manual                            GIT(1)
+ 
+NAME
+       git - the stupid content tracker
+ 
+SYNOPSIS
+       git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p|--paginate|-P|--no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>]
+           <command> [<args>]
+ 
+DESCRIPTION
+       Git is a fast, scalable, distributed revision control system with an
+       unusually rich command set that provides both high-level operations and
+       full access to internals.
+ 
+       See gittutorial(7) to get started, then see giteveryday(7) for a useful
+       minimum set of commands. The Git User’s Manual[1] has a more in-depth
+       introduction.
+ 
+       After you mastered the basic concepts, you can come back to this page
+       to learn what commands Git offers. You can learn more about individual
+       Git commands with "git help command". gitcli(7) manual page gives you
+       an overview of the command-line command syntax.
+ 
+       A formatted and hyperlinked copy of the latest Git documentation can be
+       viewed at https://git.github.io/htmldocs/git.html or
+[jalvarez@localhost ~]$ man gittutorial
+GITTUTORIAL(7)                    Git Manual                    GITTUTORIAL(7)
+ 
+NAME
+       gittutorial - A tutorial introduction to Git
+ 
+SYNOPSIS
+       git *
+ 
+DESCRIPTION
+       This tutorial explains how to import a new project into Git, make
+       changes to it, and share changes with other developers.
+ 
+       If you are instead primarily interested in using Git to fetch a
+       project, for example, to test the latest version, you may prefer to
+       start with the first two chapters of The Git User’s Manual[1].
+ 
+       First, note that you can get documentation for a command such as git
+       log --graph with:
+ 
+           $ man git-log
+ 
+       or:
+ 
+           $ git help log
+ 
+       With the latter, you can use the manual viewer of your choice; see git-
+       help(1) for more information.
+ 
+       It is a good idea to introduce yourself to Git with your name and
+[jalvarez@localhost ~]$ man git-add
+GIT-ADD(1)                        Git Manual                        GIT-ADD(1)
+ 
+NAME
+       git-add - Add file contents to the index
+ 
+SYNOPSIS
+       git add [--verbose | -v] [--dry-run | -n] [--force | -f] [--interactive |
+ -i] [--patch | -p]
+                 [--edit | -e] [--[no-]all | --[no-]ignore-removal | [--update |
+ -u]]
+                 [--intent-to-add | -N] [--refresh] [--ignore-errors] [--ignore-
+missing] [--renormalize]
+                 [--chmod=(+|-)x] [--pathspec-from-file=<file> [--pathspec-file-
+nul]]
+                 [--] [<pathspec>...]
+ 
+DESCRIPTION
+       This command updates the index using the current content found in the
+       working tree, to prepare the content staged for the next commit. It
+       typically adds the current content of existing paths as a whole, but
+       with some options it can also be used to add content with only part of
+       the changes made to the working tree files applied, or remove paths
+       that do not exist in the working tree anymore.
+ 
+       The "index" holds a snapshot of the content of the working tree, and it
+       is this snapshot that is taken as the contents of the next commit. Thus
+       after making any changes to the working tree, and before running the
+       commit command, you must use the add command to add any new or modified
+       files to the index.
+[jalvarez@localhost ~]$ man git-commit
+GIT-COMMIT(1)                     Git Manual                     GIT-COMMIT(1)
+ 
+NAME
+       git-commit - Record changes to the repository
+ 
+SYNOPSIS
+       git commit [-a | --interactive | --patch] [-s] [-v] [-u<mode>] [--amend]
+                  [--dry-run] [(-c | -C | --fixup | --squash) <commit>]
+                  [-F <file> | -m <msg>] [--reset-author] [--allow-empty]
+                  [--allow-empty-message] [--no-verify] [-e] [--author=<author>]
+                  [--date=<date>] [--cleanup=<mode>] [--[no-]status]
+                  [-i | -o] [--pathspec-from-file=<file> [--pathspec-file-nul]]
+                  [-S[<keyid>]] [--] [<pathspec>...]
+ DESCRIPTION
+       Create a new commit containing the current contents of the index and
+       the given log message describing the changes. The new commit is a
+       direct child of HEAD, usually the tip of the current branch, and the
+       branch is updated to point to it (unless no branch is associated with
+       the working tree, in which case HEAD is "detached" as described in git-
+       checkout(1)).
+ 
+       The content to be committed can be specified in several ways:
+ 
+        1. by using git-add(1) to incrementally "add" changes to the index
+           before using the commit command (Note: even modified files must be
+           "added");
+ 
+        2. by using git-rm(1) to remove files from the working tree and the
+[jalvarez@localhost ~]$ man git-push
+GIT-PUSH(1)                       Git Manual                       GIT-PUSH(1)
+ 
+NAME
+       git-push - Update remote refs along with associated objects
+ 
+SYNOPSIS
+       git push [--all | --mirror | --tags] [--follow-tags] [--atomic] [-n | --d
+ry-run] [--receive-pack=<git-receive-pack>]
+                  [--repo=<repository>] [-f | --force] [-d | --delete] [--prune]
+ [-v | --verbose]
+                  [-u | --set-upstream] [-o <string> | --push-option=<string>]
+                  [--[no-]signed|--signed=(true|false|if-asked)]
+                  [--force-with-lease[=<refname>[:<expect>]]]
+                  [--no-verify] [<repository> [<refspec>...]]
+ 
+DESCRIPTION
+       Updates remote refs using local refs, while sending objects necessary
+       to complete the given refs.
+ 
+       You can make interesting things happen to a repository every time you
+       push into it, by setting up hooks there. See documentation for git-
+       receive-pack(1).
+ 
+       When the command line does not specify where to push with the
+       <repository> argument, branch.*.remote configuration for the current
+       branch is consulted to determine where to push. If the configuration is
+       missing, it defaults to origin.
+ 
+       When the command line does not specify what to push with <refspec>...
+[jalvarez@localhost ~]$ man git-remote
+GIT-REMOTE(1)                     Git Manual                     GIT-REMOTE(1)
+ 
+NAME
+       git-remote - Manage set of tracked repositories
+ SYNOPSIS
+       git remote [-v | --verbose]
+       git remote add [-t <branch>] [-m <master>] [-f] [--[no-]tags] [--mirror=<
+fetch|push>] <name> <url>
+       git remote rename <old> <new>
+       git remote remove <name>
+       git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+       git remote set-branches [--add] <name> <branch>...
+       git remote get-url [--push] [--all] <name>
+       git remote set-url [--push] <name> <newurl> [<oldurl>]
+       git remote set-url --add [--push] <name> <newurl>
+       git remote set-url --delete [--push] <name> <url>
+       git remote [-v | --verbose] show [-n] <name>...
+       git remote prune [-n | --dry-run] <name>...
+       git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)..
+.]
+ 
+DESCRIPTION
+       Manage the set of repositories ("remotes") whose branches you track.
+ OPTIONS
+       -v, --verbose
+           Be a little more verbose and show remote url after name. NOTE: This
+           must be placed between remote and subcommand.
+[jalvarez@localhost ~]$
+
+
+
+
