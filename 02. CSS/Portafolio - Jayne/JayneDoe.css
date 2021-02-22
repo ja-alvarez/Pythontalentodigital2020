@@ -1,8 +1,6 @@
-* {
-    outline: 1px dotted red;
-}
+/* * {outline: 1px dotted red;} */
 
-#body / {
+#body {
     background-color: #f9f9f9;
 }
 
